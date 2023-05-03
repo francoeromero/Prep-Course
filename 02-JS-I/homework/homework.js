@@ -92,7 +92,12 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if(num < 90){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function mayorQueCincuenta(num) {
@@ -189,10 +194,10 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   if(num > 0){
-    return "Es positivo";
+    return 'Es positivo';
   }
   else if(num < 0){
-    return "Es negativo";
+    return 'Es negativo';
   } 
   else{
     return false;
@@ -252,9 +257,9 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+  let euro_dolar = 1.20;
+  return euro * euro_dolar;
 }
-
 
 function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
@@ -262,7 +267,16 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
+  letra = prompt('Ingrese una vocal: ');
+  while(letra.length > 1){
+    letra = prompt('Dato incorrecto!, reingrese la vocal: ');
+  }
+  if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+    return console.log('Es vocal');
+  }
+  else{
+    return console.log('Dato incorrecto');
+  }
 }
 
 
