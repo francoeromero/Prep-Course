@@ -225,15 +225,32 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  let aString = numero.toString();
+  if (aString.length == 3){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let i = 0;
+  do {
+    i += 5
+  }while(i < 40)
+  return console.log(i);
 }
 
+// let contador = 0;
+// let acumulador = 0;
+// do{
+//   acumulador += 5
+//   contador++;
+// }while(contador < 8)
 
 // No modificar nada debajo de esta línea
 // --------------------------------
