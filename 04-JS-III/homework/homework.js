@@ -57,6 +57,9 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  let palabras_juntas;
+  palabras_juntas = palabras.join(' ');
+  return palabras_juntas
 }
 
 
@@ -64,6 +67,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  for(let i = 0; i < array.length; i++){
+    if(array[i]==elemento){
+      return true; // una vez que devuelve true ya esta, no lee el return false porque ya devolvio
+    }
+  }
+  return false;
 }
 
 
@@ -71,6 +80,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let suma_enteros = 0;
+  for(let i = 0; i < numeros.length; i++){
+    suma_enteros = suma_enteros + numeros[i];
+  }
+  return suma_enteros;
 }
 
 
