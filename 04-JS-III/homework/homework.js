@@ -242,19 +242,33 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  let i = 0;
-  let cantidad_veces = 10;
-  let nuevo_array = []
-  while(i < cantidad_veces){
-    numero += 2;
+  let new_array = [];
+  for(let i = 0; i < 10; i++){
+    new_array.push(numero)
+    numero +=2;
     if(numero === i){
+      break;
       return 'Se interrumpió la ejecución';
     }
-    nuevo_array.push(numero);
-    i++;
   }
-  return nuevo_array;
+  return new_array;
+  
 }
+
+
+// let i = 0;
+// let cantidad_veces = 10;
+// let nuevo_array = []
+// while(i < cantidad_veces){
+//   numero += 2;
+//   if(numero === i){
+//     return 'Se interrumpió la ejecución';
+//   }
+//   nuevo_array.push(numero);
+//   i++;
+// }
+// return nuevo_array;
+
 
 
 function continueStatement(numero) {
