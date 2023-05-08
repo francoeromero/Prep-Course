@@ -262,6 +262,7 @@ function breakStatement(numero) {
 // while(i < cantidad_veces){
 //   numero += 2;
 //   if(numero === i){
+//     break;
 //     return 'Se interrumpió la ejecución';
 //   }
 //   nuevo_array.push(numero);
@@ -278,18 +279,36 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-  let nuevo_array = [];
-  let i = 0;
-  while(i < 10){
-    i++;
+  let new_array = [];
+  for(let i = 0; i < 10; i++){
     if(i == 5){
       continue;
     }
-    numero += 2;
-    nuevo_array.push(numero);
+    else{
+      numero += 2;
+    }
+    new_array.push(numero);
   }
-  return nuevo_array;
+  return new_array;
 }
+
+
+
+
+
+
+
+  // let nuevo_array = [];
+  // let i = 0;
+  // while(i < 10){
+  //   i++;
+  //   if(i == 5){
+  //     continue;
+  //   }
+  //   numero += 2;
+  //   nuevo_array.push(numero);
+  // }
+  // return nuevo_array;
 
 
 // No modificar nada debajo de esta línea
