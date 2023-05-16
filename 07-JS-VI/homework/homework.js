@@ -67,6 +67,8 @@ function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  let nuevo_array = array.filter(i => i.startsWith('a'));
+  return nuevo_array;
 }
 
 // No modificar nada debajo de esta línea
