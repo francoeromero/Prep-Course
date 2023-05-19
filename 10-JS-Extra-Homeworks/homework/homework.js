@@ -38,6 +38,16 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let acumulador_mayus="";
+  let acumulador_min="";
+  for(let i = 0; i < s.length; i++){
+      if(s[i] === s[i].toUpperCase()){
+          acumulador_mayus += s.charAt(i);
+      }else{
+          acumulador_min+=s.charAt(i);
+      }
+  }
+  return acumulador_mayus + acumulador_min;
 }
 
 
