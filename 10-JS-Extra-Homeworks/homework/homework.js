@@ -57,6 +57,19 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  // Dividir la frase en palabras
+  var words = str.split(" ");
+
+  // Invertir cada palabra y unirlas
+  var reversedWords = words.map(function(word) {
+    return word.split("").reverse().join("");
+  });
+
+  // Unir las palabras invertidas en una sola frase
+  var mirroredStr = reversedWords.join(" ");
+
+  // Devolver la frase resultante
+  return mirroredStr;
 } 
 
 
