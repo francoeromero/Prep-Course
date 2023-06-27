@@ -67,3 +67,8 @@ console.log(actividadesEnComun(['leer', 'comer', 'pasear', 'dormir', 'jugar'], [
 // }
 
 // console.log(actividadesEnComun(['leer', 'comer', 'pasear', 'dormir', 'jugar'], ['comer', 'dormir', 'futbol']))
+
+// --------------------------------------------------
+
+// 2- Escribe una funcion que permita dividir un arreglo de enteros en varias partes de manera que cada parte tenga como maximo una cantidad definida de elementos (que va a recibir como parametro)
+
