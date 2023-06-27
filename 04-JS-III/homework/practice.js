@@ -72,3 +72,74 @@ console.log(actividadesEnComun(['leer', 'comer', 'pasear', 'dormir', 'jugar'], [
 
 // 2- Escribe una funcion que permita dividir un arreglo de enteros en varias partes de manera que cada parte tenga como maximo una cantidad definida de elementos (que va a recibir como parametro)
 
+function partir(arreglo, cantidad){
+    
+    let grupos = [];
+    // hacemos un bucle, que va dar vueltas segun la cantidad que se divide
+    for (let i = 0; i < arreglo.length; i += cantidad) {
+        // luego usammos slice para agarrar un fragmento  de la lista
+        // del i hasta i + cantidad, 0, 2 y la otra vuelta 2, 4
+        let grupo = arreglo.slice(i, i + cantidad);
+        // y lo meto en la lista creada   
+        grupos.push(grupo);
+    }
+    return grupos;
+}
+console.log(partir([1,2,3,4], 2))
+
+
+// 3- Clase libro. Para este ejercicio definir una clase Libro con sus propiedades y metodos
+// las propiedades de la clase libro son:
+
+// titulo
+// autor
+// traducciones
+
+// El constructor de la clase recibe esos tres datos por parametro
+// Los metodos de la clase libro son: 
+
+// getTitulo: permite obtener el titulo del libro
+// getAutor: permite obtener el autor del libro
+// getTraducciones retorna un arreglo con todos los idiomas de las traducciones
+// addTraduccion a partir de los parametros recibidos agrega un objeto al arreglo de traducciones
+
+// ejemplo:
+
+/*
+var traduccionesDeHp = {
+    idioma: "español",
+    editorial: "Santillana"
+},
+{
+    idioma: "frances",
+    editorial: "Mystique"
+},
+{
+    idioma: "aleman",
+    editorial: "Scholastic"
+}
+*/
+
+class Libro {
+    constructor(titulo, autor, traducciones){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.traducciones = traducciones;
+    }
+
+    getTitulo(){
+        return this.titulo;
+    }
+
+    getAutor(){
+        return this.autor;
+    }
+
+    getTraducciones(){
+        return this.traducciones.map((e)=> e.idioma)
+    }
+
+    addTraduccion(idioma, editorial){
+        this.traducciones.push(idioma, editorial)
+    }
+}
